@@ -15,7 +15,7 @@ class CreateProductGalleriesTable extends Migration
     {
         Schema::create('product_galleries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained('products')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('products_id')->constrained('products')->onUpdate('cascade')->onDelete('cascade');
             $table->string('photo');
             $table->boolean('isDefault');
 

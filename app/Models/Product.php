@@ -20,8 +20,8 @@ class Product extends Model
         'quantity'
     ];
 
-    // public function galleries()
-    // {
-    //     return $this->hasMany(ProductGallery::class, 'products_id');
-    // }
+    public function galleries()
+    {
+        return $this->hasMany(ProductGallery::class, 'products_id');
+    }
 }
