@@ -17,7 +17,7 @@ class CreateProductGalleriesTable extends Migration
             $table->id();
             $table->foreignId('products_id')->constrained('products')->onUpdate('cascade')->onDelete('cascade');
             $table->string('photo');
-            $table->boolean('isDefault');
+            $table->boolean('is_default');
 
             $table->softDeletes();
             $table->timestamps();
