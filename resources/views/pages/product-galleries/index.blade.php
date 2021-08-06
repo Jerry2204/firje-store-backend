@@ -21,8 +21,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @forelse ($galleries as $item)
                                     <tr class="text-center">
-                                        @forelse ($galleries as $item)
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->product->name }}</td>
                                         <td>
@@ -38,12 +38,12 @@
                                                 </button>
                                             </form>
                                         </td>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center p-5">Product Gallery Not Found</td>
-                                        </tr>
-                                        @endforelse
                                     </tr>
+                                    @empty
+                                    <tr>
+                                        <td colspan="6" class="text-center p-5">Product Gallery Not Found</td>
+                                    </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>

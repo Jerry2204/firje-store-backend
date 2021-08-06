@@ -11,7 +11,7 @@ class ProductGallery extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['products_id', 'photo', 'isDefault'];
+    protected $fillable = ['products_id', 'photo', 'is_default'];
 
 
     public function product ()

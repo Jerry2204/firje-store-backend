@@ -22,8 +22,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @forelse ($products as $item)
                                     <tr class="text-center">
-                                        @forelse ($products as $item)
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->type }}</td>
@@ -44,12 +44,12 @@
                                                 </button>
                                             </form>
                                         </td>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center p-5">Products Not Found</td>
-                                        </tr>
-                                        @endforelse
                                     </tr>
+                                    @empty
+                                    <tr>
+                                        <td colspan="6" class="text-center p-5">Products Not Found</td>
+                                    </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>
